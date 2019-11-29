@@ -1,0 +1,21 @@
+{
+  "name": "grudan",
+  "version": "1.0.0",
+  "description": "RPG platform",
+  "main": "main.js",
+  "dependencies": {
+    "gdrive-fs": "^1.1.5",
+    "screenfull": "^5.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "uglifyify": "^5.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -g uglifyify main.js -o static/bundle.js",
+    "watch": "watchify main.js -o static/bundle.js --debug --verbose"
+  },
+  "author": "Daniel Schwen",
+  "license": "ISC"
+}
