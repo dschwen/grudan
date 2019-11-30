@@ -3,8 +3,8 @@
 var screenfull = require('screenfull');
 var gdfs = require('gdrive-fs');
 
-const IconSheet = require('./IconSheet.js');
-const IconEdit = require('./IconEdit.js');
+const IconSheet = require('./lib/IconSheet.js');
+const IconEdit = require('./lib/IconEdit.js');
 
 // wrapper function
 (function() {
