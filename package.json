@@ -20,5 +20,9 @@
     "watch": "watchify main.js -o static/bundle.js --debug --verbose"
   },
   "author": "Daniel Schwen",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/dschwen/grudan.git"
+  }
 }
