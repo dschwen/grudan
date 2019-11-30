@@ -1,13 +1,19 @@
 /*jshint esversion: 6 */
 
+const $ = require('jquery');
+
+const Canvas = require('./Canvas.js')
+
 class IconEdit
 {
   constructor(state) {
     this.state = state;
-    this.canvas = document.createElement("canvas");
-    this.ctx = this.canvas.getContext('2d');
+    this.w = 16;
+    this.h = 16;
 
-    this.backPattern = makeBackgroundPattern(4);
+    this.back = new Canvas(this.w, this.h);
+    this.front = new Canvas(this.w * this.mul, this.h * this.mul);
+    this.pattern = new Canvas(this.w * this.mul, this.h * this.mul);
   }
 
   setIcon(icon) {
@@ -18,12 +24,12 @@ class IconEdit
 
   }
 
-  makeBackgroundPattern(mul) {
-    var canvas = document.createElement("canvas");
-    canvas.width = this.w * mul;
-    canvas.height = this.h * mul;
-    var ctx = this.canvas.getContext('2d');
-    var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  update() {
+    this.ctx.drawImage(backbuffer, 0, 0, backbuffer.width, backbuffer.height, 0, 0, canvas.width, canvas.height);
+  }
+
+  makeBackgroundPattern() {
+    var imageData = this.pattern.getData();
     var data = imageData.data;
     var i = 0;
     for (let x = 0; x < imageData.width; ++x) {
@@ -36,8 +42,7 @@ class IconEdit
         i += 4;
       }
     }
-    ctx.putImageData(imageData, 0, 0);
-    return ctx;
+    pattern.putData(imageData);
   }
 }
 

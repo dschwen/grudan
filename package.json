@@ -5,6 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "gdrive-fs": "^1.1.5",
+    "jquery": "^3.4.1",
     "jquery-ui": "^1.12.1",
     "screenfull": "^5.0.0"
   },
