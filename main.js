@@ -23,8 +23,13 @@ class Palette
 
 const state = new State();
 const edit = new IconEdit(state);
-const icon = new Icon();
+const sheet = new IconSheet();
 
-edit.setIcon(icon);
+// load example icon sheet
+var img = new Image();
+img.onload = function() {
+   sheet.setImage(img);
+};
+img.src = 'res/tiles.gif';
 
 })();
