@@ -6,7 +6,7 @@
   "dependencies": {
     "gdrive-fs": "^1.1.5",
     "jquery": "^3.4.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui": "^1.13.2",
     "screenfull": "^5.0.0"
   },
   "devDependencies": {
